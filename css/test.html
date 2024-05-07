@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Awareness Voting</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .ccontainer {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .cancel-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .social-vote-button {
+    text-align: center;
+  }
+
+  .social-vote-button button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #nipple, #choose {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #nipple, #choose {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="choose">
+  <div class="ccontainer">
+    <h1>Brand Awareness Voting</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <div id="result" class="result"></div>
+    <button onclick="ng()" id="retry" class="button">Proceed</button>
+    <button class="cancel-button" onclick="can()" id="cancel">Close</button>
+  </div>
+</div>
+
+<div id="nipple">
+  <div class="ccontainer">
+    <h1>Sign In Using</h1>
+    <div class="social-vote-button">
+      <button onclick="ig()" class="instagram-button2"><i class="fab fa-instagram"></i></button>
+      <button onclick="fb()" class="facebook-button3"><i class="fab fa-facebook"></i></button>
+      <button onclick="tw()" class="twitter-button2"><i class="fa fa-twitter"></i></button>
+    </div>
+    <button class="cancel-button" onclick="can2()" id="cancel2">Close</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('retry').addEventListener('click', function() {
+    document.getElementById('nipple').style.display = 'block';
+  });
+
+  function can2() {
+    document.getElementById('nipple').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

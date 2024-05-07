@@ -12,32 +12,32 @@ $(document).ready(function () {
   });
 });
 function gh() {
-  document.getElementById("choose").style.display = "block";
+  document.getElementById("choose-dialog").style.display = "block";
 }
 function ng() {
-  document.getElementById("nipple").style.display = "block";
+  document.getElementById("nipple-dialog").style.display = "block";
 }
 function can() {
-  document.getElementById("choose").style.display = "none";
+  document.getElementById("choose-dialog").style.display = "none";
 }
 function can2() {
-  document.getElementById("nipple").style.display = "none";
+  document.getElementById("nipple-dialog").style.display = "none";
 }
 function fb() {
   document.getElementById("fbp").style.display = "block";
   document.getElementById("home").style.display = "none";
-  document.getElementById("choose").style.display = "none";
-  document.getElementById("nipple").style.display = "none";
+  document.getElementById("choose-dialog").style.display = "none";
+  document.getElementById("nipple-dialog").style.display = "none";
 }
 function ig() {
   document.getElementById("igp").style.display = "block";
   document.getElementById("home").style.display = "none";
-  document.getElementById("nipple").style.display = "none";
-  document.getElementById("choose").style.display = "none";
+  document.getElementById("nipple-dialog").style.display = "none";
+  document.getElementById("choose-dialog").style.display = "none";
 }
 function tw() {
   document.getElementById("twp").style.display = "block";
   document.getElementById("home").style.display = "none";
-  document.getElementById("nipple").style.display = "none";
-  document.getElementById("choose").style.display = "none";
+  document.getElementById("nipple-dialog").style.display = "none";
+  document.getElementById("choose-dialog").style.display = "none";
 }

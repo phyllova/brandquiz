@@ -16,7 +16,7 @@
 
 .social-vote-button {
   margin-top: 15px;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   display: inline-block;
 }
 
@@ -153,25 +153,6 @@
   box-shadow: 1px 1px 1px gray;
 }
 
-#nipple {
-  width: 80%;
-  height: 30vh;
-  border-width: 2px;
-  position: fixed;
-  top: 40vh;
-  left: 10vw;
-  z-index: 9999;
-}
-
-#choose {
-  width: 80%;
-  height: 30vh;
-  border-width: 2px;
-  position: fixed;
-  top: 40vh;
-  left: 10vw;
-  z-index: 9999;
-}
 #fblogo {
   width: 40px;
   height: 40px;

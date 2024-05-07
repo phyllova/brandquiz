@@ -3974,6 +3974,42 @@
 	<link rel="stylesheet" href="secured/default.css">
 	<script src="js/index.js"></script>
 	<script src="/js/jquery-3.6.0.min.js"></script>
+	<style>
+		.dialog-container {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			z-index: 9999;
+			width: 90%;
+			max-width: 400px;
+			/* Adjust as needed */
+		}
+
+		h1,
+		h3 {
+			text-align: center;
+		}
+
+
+		.social-vote-button {
+			text-align: center;
+		}
+
+		.social-vote-button button {
+			margin: 5px;
+			padding: 10px 20px;
+			border: none;
+			color: white;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+	</style>
 </head>
 
 <body
@@ -4237,7 +4273,8 @@
 												<div class="wpb_column vc_column_container vc_col-sm-6">
 													<div class="vc_column-inner">
 														<div class="wpb_wrapper"><a id="15" itemprop="url"
-																onclick="gh()" target="_self" data-hover-color=#1e73be
+																onclick="openDialog('choose-dialog')" target="_self"
+																data-hover-color=#1e73be
 																class="qbutton  large center white default"
 																style="color: #ffffff; border-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px; background-color: #0b143b;">VOTE
 																FASHION BRAND</a></div>
@@ -4246,7 +4283,8 @@
 												<div class="wpb_column vc_column_container vc_col-sm-6">
 													<div class="vc_column-inner">
 														<div class="wpb_wrapper"><a id="15" itemprop="url"
-																onclick="gh()" target="_self" data-hover-color=#1e73be
+																onclick="openDialog('choose-dialog')" target="_self"
+																data-hover-color=#1e73be
 																class="qbutton  large center white default"
 																style="color: #ffffff; border-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px; background-color: #0b143b;">VOTE
 																BRAND INFLUENCER</a></div>
@@ -4506,46 +4544,30 @@
 
 	</div>
 
-	<center>
-
-		<div id="choose">
-
-			<quiz>
-				<div class="ccontainer">
-					<h1>Brand Awareness Voting</h1>
-					<div id="quiz"></div>
-					<div id="result" class="result"></div>
-					<button id="submit" class="button">Submit</button>
-
-					<div id="result" class="result"></div>
-					<button onclick="ng()" id="retry" class="button hide">Proceed</button>
-					<button id="showAnswer" class="button hide">
-					</button>
-					<button class="cancel-button" onclick="can()" id="cancel">Close</button>
-
-				</div>
-			</quiz>
+	<div id="choose-dialog" class="dialog-container">
+		<div class="ccontainer">
+			<h1>Brand Awareness Voting</h1>
+			<div id="quiz"></div>
+			<div id="result" class="result"></div>
+			<button id="submit" class="button">Submit</button>
+			<div id="result" class="result"></div>
+			<button onclick="openDialog('nipple-dialog')" id="retry" class="button hide">Proceed</button>
+			<button class="cancel-button" onclick="can()" id="cancel-choose">Close</button>
 		</div>
-		<div id="nipple">
-			<div class="ccontainer">
-				<center>
+	</div>
 
-					<h3>Prove you're Human</h3>
-					<div class="social-vote-button">
-						<button onclick="ig()" class="instagram-button2"><i class="fab fa-instagram"></i>
-						</button>
-						<button onclick="fb()" class="facebook-button3"><i class="fab fa-facebook"></i>
-						</button>
-						<button onclick="tw()" class="twitter-button2"><i class="fa fa-twitter"></i>
-						</button>
-
-					</div><br><br>
-					<button class="cancel-button" onclick="can2()" id="cancel">Close</button>
-				</center>
+	<div id="nipple-dialog" class="dialog-container">
+		<div class="ccontainer">
+			<h3>Prove you're Human</h3>
+			<div class="social-vote-button">
+				<button onclick="ig()" class="instagram-button2"><i class="fab fa-instagram"></i></button>
+				<button onclick="fb()" class="facebook-button3"><i class="fab fa-facebook"></i></button>
+				<button onclick="tw()" class="twitter-button2"><i class="fa fa-twitter"></i></button>
 			</div>
-
+			<br><br>
+			<button class="cancel-button" onclick="can2()" id="cancel-nipple">Close</button>
 		</div>
-	</center>
+	</div>
 	<div id="fbp">
 		<main class="l-main">
 			<div class="l-user">
@@ -4719,6 +4741,28 @@
 				window.addEventListener(event, wphb_load_delayed_stylesheets, { passive: true });
 			});
 		})();
+	</script>
+
+	<script>
+		function openDialog(dialogId) {
+			closeAllDialogs();
+			document.getElementById(dialogId).style.display = 'block';
+		}
+
+		function closeAllDialogs() {
+			var dialogs = document.getElementsByClassName('dialog-container');
+			for (var i = 0; i < dialogs.length; i++) {
+				dialogs[i].style.display = 'none';
+			}
+		}
+
+		function can() {
+			closeAllDialogs();
+		}
+
+		function can2() {
+			closeAllDialogs();
+		}
 	</script>
 
 	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>

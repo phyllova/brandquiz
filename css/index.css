@@ -3,12 +3,18 @@
   padding: 0;
   display: block;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  background: #b9b3a9;
+  display: flex;
+  justify-content: center;
+}
 #choose {
   margin: 0;
   padding: 0;
   display: none;
 }
-#dialogbox {
+#nipple {
   margin: 0;
   padding: 0;
   display: none;
@@ -16,7 +22,7 @@
 
 .social-vote-button {
   margin-top: 15px;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   display: inline-block;
 }
 
@@ -152,18 +158,7 @@
   top: 5px;
   box-shadow: 1px 1px 1px gray;
 }
-#choose {
-  background-color: white;
-  width: 80%;
-  height: 30vh;
-  border-style: dotted;
-  border-width: 2px;
-  border-color: rgba(42, 6, 6, 0.292);
-  position: fixed;
-  top: 40vh;
-  left: 10vw;
-  z-index: 30;
-}
+
 #dialogbox {
   background-color: white;
   width: 80%;
@@ -175,6 +170,23 @@
   top: 40vh;
   left: 10vw;
   z-index: 30;
+}
+
+#choose {
+  border-width: 2px;
+  position: fixed;
+  top: 20vh;
+  z-index: 9999;
+  left: 10vw;
+  display: none;
+}
+#nipple {
+  border-width: 2px;
+  position: fixed;
+  top: 20vh;
+  z-index: 9998;
+  left: 10vw;
+  display: none;
 }
 #fblogo {
   width: 40px;

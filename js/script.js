@@ -109,6 +109,6 @@ function retryQuiz() {
 }
 
 submitButton.addEventListener("click", checkAnswer);
-retryButton.addEventListener("onclick", vote());
+retryButton.addEventListener("onclick", ng());
 
 displayQuestion();

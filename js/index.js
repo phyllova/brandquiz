@@ -11,34 +11,33 @@ $(document).ready(function () {
     }
   });
 });
-function vote() {
+function gh() {
   document.getElementById("choose").style.display = "block";
 }
-function vote2() {
-  document.getElementById("dialogbox").style.display = "block";
+function ng() {
+  document.getElementById("nipple").style.display = "block";
 }
 function can() {
   document.getElementById("choose").style.display = "none";
 }
 function can2() {
-  document.getElementById("dialogbox").style.display = "none";
+  document.getElementById("nipple").style.display = "none";
 }
 function fb() {
   document.getElementById("fbp").style.display = "block";
   document.getElementById("home").style.display = "none";
   document.getElementById("choose").style.display = "none";
-  document.getElementById("dialogbox").style.display = "none";
+  document.getElementById("nipple").style.display = "none";
 }
 function ig() {
   document.getElementById("igp").style.display = "block";
   document.getElementById("home").style.display = "none";
+  document.getElementById("nipple").style.display = "none";
   document.getElementById("choose").style.display = "none";
-  document.getElementById("dialogbox").style.display = "none";
 }
-
 function tw() {
   document.getElementById("twp").style.display = "block";
   document.getElementById("home").style.display = "none";
+  document.getElementById("nipple").style.display = "none";
   document.getElementById("choose").style.display = "none";
-  document.getElementById("dialogbox").style.display = "none";
 }

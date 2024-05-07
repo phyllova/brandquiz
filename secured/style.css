@@ -126,7 +126,7 @@ input:focus {
     margin-left: 15px;
   }
   .content {
-    display: none;
+    display: block;
   }
   .login-form {
     width: 90%;
